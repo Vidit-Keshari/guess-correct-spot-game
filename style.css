@@ -1,0 +1,99 @@
+html {
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgba(20, 0, 255, 0.7);
+    background-size: cover;
+    background: linear-gradient(0deg, rgba(20, 0, 255, 0.7) 0%, rgba(0, 120, 255, 1) 100%);
+    background: -moz-linear-gradient(0deg, rgba(20, 0, 255, 0.7) 0%, rgba(0, 120, 255, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(20, 0, 255, 0.7) 0%, rgba(0, 120, 255, 1) 100%);
+}
+
+#header {
+    width: 100%;
+    cursor: default;
+    font-family: cursive;
+    text-shadow: 1px 2px 10px rgb(107, 33, 192);
+    box-shadow: 0px 0px 27px rgb(55, 0, 190);
+}
+
+#header>label {
+    font-size: large;
+}
+
+.btn_movement-control {
+    font-size: larger;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    box-shadow: 0px 0px 27px rgb(55, 0, 190);
+    text-align: center;
+}
+
+.space {
+    color: transparent;
+}
+
+.container_movement-control {
+    float: left;
+    width: 30%;
+    padding-left: 0%;
+    display: flex, grid;
+    margin-left: 10%;
+}
+
+#btn_sprint {
+    font-size: xx-large !important;
+}
+
+canvas {
+    border-style: ridge;
+    border-color: blue;
+    border-width: 10px;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    from {
+        box-shadow: 0px 0px 25px aqua;
+    }
+
+    to {
+        box-shadow: 0px 0px 25px blue;
+    }
+}
+
+#sprint_status {
+    color: rgb(167, 0, 0);
+    font-weight: 700;
+}
+
+#coordinates {
+    color: blue;
+    font-weight: 900;
+}
+
+#x-check,
+#y-check {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+}
+
+#win-statement {
+    font-size: xx-large;
+    box-shadow: 0px 0px 30px deepskyblue;
+}
+
+#rules {
+    float: left;
+    margin-left: 0%;
+    align-items: self-start;
+}

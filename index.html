@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Guess correct spot web game</title>
+    <!--Bootsrap links-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--P5.js link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <!--js and css file src-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="contents">
+        <center>
+            <div id="header" class="btn btn-info">
+                <h1>Guess the correct spot game</h1>
+                <label>by Vidit</label>
+            </div>
+            <br><br>
+            <div id="game-area">
+                <label class="btn btn-success" id="sprint_status">Sprint mode is off</label>
+                <br><br>
+                <label class="btn btn-success" id="coordinates">x = 30, y = 30</label>
+                <br><br>
+                <label id="x-check">x</label><label class="space">.....</label> <label id="y-check">y</label>
+                <br><br>
+                <label class="btn btn-danger" id="win-statement"></label>
+                <br><br>
+                <div id="timer">
+                    <label class="btn btn-primary" onclick="timer_start();">Time Left: <b id="time">15</b>
+                        seconds</label>
+                </div>
+                <br><br>
+                <button onclick="window.location.reload()" class="btn btn-warning">Restart game</button>
+                <br><br>
+                <div id="canvas">
+
+                </div>
+                <br><br>
+                <div id="controls">
+                    <span class="container_movement-control">
+                        <button class="btn btn-warning btn_movement-control" id="btn_up"
+                            onclick="moveUp();">&UpArrow;</button>
+                        <br>
+                        <span>
+                            <button class="btn btn-warning btn_movement-control" id="btn_left"
+                                onclick="moveLeft();">&LeftArrow;</button>
+                            <label class="space">............</label>
+                            <button class="btn btn-warning btn_movement-control" id="btn_right"
+                                onclick="moveRight();">&RightArrow;</button>
+                        </span>
+                        <br>
+                        <button class="btn btn-warning btn_movement-control" id="btn_down"
+                            onclick="moveDown();">&DownArrow;</button>
+                    </span>
+                    <span class="container_sprint-control">
+                        <button class="btn btn-warning btn_movement-control" id="btn_sprint"
+                            onclick="sprint();">🏃🏻</button>
+                    </span>
+                </div>
+            </div>
+            <br><br>
+        </center>
+        <div id="rules">
+            <ul>
+                <li class="btn btn-success">Do not cheat by any means.</li>
+                <br><br>
+                <li class="btn btn-success">Developer options not allowed.</li>
+                <br><br>
+                <li class="btn btn-success">To play with the timer, click on the timer.</li>
+                <br><br>
+                <li class="btn btn-success">Use arrow keys or buttons provided to move and spacebar or sprint button to
+                    increase speed.</li>
+                <br><br>
+                <li class="btn btn-success">Stay within the canvas boundaries.</li>
+                <br><br>
+                <li class="btn btn-success">The game includes a countdown timer. If time runs out, the game will restart
+                    automatically.</li>
+                <br><br>
+                <li class="btn btn-success">You win the game by moving the circle to the target coordinates (x, y). The
+                    coordinates will change each time you win.</li>
+                <br><br>
+                <li class="btn btn-success">The game will automatically restart if you win or if time runs out. You can
+                    also manually refresh the page to restart.</li>
+                <br><br>
+                <li class="btn btn-success">Do not use browser developer tools or any other means to alter the game.
+                </li>
+                <br><br>
+                <li class="btn btn-success">For better accessibility, make sure you are using a modern browser with
+                    support for JavaScript and HTML5.</li>
+                <br><br>
+                <li class="btn btn-success">Ensure your browser window is not minimized or zoomed out too much to avoid
+                    issues with game display.</li>
+                <br><br>
+                <li class="btn btn-success">If you encounter any bugs or issues, please report them to the developer.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>
